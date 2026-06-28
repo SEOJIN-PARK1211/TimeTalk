@@ -76,6 +76,13 @@
     color: #0F172A;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  input, textarea {
+    -webkit-user-select: auto;
+    user-select: auto;
   }
 
   #root {

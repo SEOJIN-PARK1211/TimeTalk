@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 
 const GUIDES = [
   {
@@ -73,11 +73,20 @@ const GUIDES = [
 export default function EthicsGate() {
   const [agreed, setAgreed] = useState(false)
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const figureId = searchParams.get('figureId')
+
+  useEffect(() => {
+    if (!figureId || figureId === 'null') {
+      navigate('/student/select-figure', { replace: true })
+    }
+  }, [figureId, navigate])
 
   const handleAgree = () => {
+    if (!figureId || figureId === 'null') return
     setAgreed(true)
     setTimeout(() => {
-      navigate('/student/interview')
+      navigate(`/student/interview?figureId=${figureId}`)
     }, 600)
   }
 

@@ -20,7 +20,7 @@ export default function Login() {
         if (user.isNewUser) {
           setShowNameModal(true)
         } else {
-          navigate('/student/ethics', { replace: true })
+          navigate('/student/select-figure', { replace: true })
         }
       } else {
         navigate('/teacher/dashboard', { replace: true })
@@ -51,7 +51,7 @@ export default function Login() {
     try {
       await updateUserName(realName.trim())
       setShowNameModal(false)
-      navigate('/student/ethics', { replace: true })
+      navigate('/student/select-figure', { replace: true })
     } catch (err: any) {
       setError('이름 저장에 실패했습니다.')
     } finally {
@@ -132,7 +132,7 @@ export default function Login() {
             <p className="text-sm text-slate-600 leading-relaxed">
               {role === 'student'
                 ? '학생은 개인 Google 계정으로 로그인합니다.'
-                : '교사는 Google 계정으로 로그인 후 수업을 관리할 수 있습니다.'}
+                : <>교사는 Google 계정으로 로그인 후<br />수업을 관리할 수 있습니다.</>}
             </p>
             <p className="text-xs text-orange-600 font-semibold mt-2">
               ⚠️ 이 서비스는 실명 기반으로 운영됩니다.
