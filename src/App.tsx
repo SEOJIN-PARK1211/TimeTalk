@@ -7,11 +7,13 @@ import SelectFigure from './pages/SelectFigure'
 import ReportDraft from './pages/ReportDraft'
 import TeacherDashboard from './pages/TeacherDashboard'
 import Footer from './components/Footer'
+import GuideModal from './components/GuideModal'
 
 export default function App() {
   return (
     <AuthProvider>
       <div className="flex flex-col min-h-screen">
+        <GuideModal />
         <main className="flex-1 flex flex-col">
           <Routes>
             <Route path="/" element={<Login />} />
