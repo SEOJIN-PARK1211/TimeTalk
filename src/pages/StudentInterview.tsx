@@ -318,7 +318,7 @@ export default function StudentInterview() {
   }
 
   return (
-    <div className="flex flex-col flex-1 bg-slate-50">
+    <div className="flex flex-col h-[100dvh] bg-slate-50">
       {/* 상단 바 */}
       <header className="bg-white border-b border-slate-200 px-4 py-3 flex-shrink-0">
         <div className="max-w-3xl mx-auto flex items-center justify-between">
@@ -375,7 +375,7 @@ export default function StudentInterview() {
                   👑
                 </div>
               )}
-              <div className={`max-w-[75%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+              <div className={`max-w-[85%] md:max-w-[75%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
                 msg.role === 'user'
                   ? 'bg-blue-600 text-white rounded-br-md shadow-sm'
                   : msg.isOffTopic

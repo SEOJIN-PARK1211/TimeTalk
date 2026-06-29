@@ -82,7 +82,7 @@ export default function SelectFigure() {
   }
 
   return (
-    <div className="flex flex-col flex-1 bg-slate-50 p-6">
+    <div className="flex flex-col flex-1 bg-slate-50 p-4 sm:p-6 min-h-[100dvh]">
       {/* 상단 헤더: 사용자 정보 및 로그아웃 */}
       <div className="max-w-4xl mx-auto w-full flex items-center justify-between mb-8">
         <div className="flex items-center gap-3">
@@ -114,28 +114,28 @@ export default function SelectFigure() {
                 const figureName = figures.find(f => f.id === fb.figureId)?.name || '알 수 없음'
 
                 return (
-                  <div key={fb.id} className={`p-4 rounded-xl border ${isRevisionRequested ? 'bg-blue-50 border-blue-200' : 'bg-slate-50 border-slate-200'} flex items-center justify-between shadow-sm transition-all`}>
-                    <div className="flex-1 pr-4">
+                  <div key={fb.id} className={`p-4 rounded-xl border ${isRevisionRequested ? 'bg-blue-50 border-blue-200' : 'bg-slate-50 border-slate-200'} flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-0 shadow-sm transition-all`}>
+                    <div className="flex-1 pr-0 sm:pr-4">
                       <div className="flex items-center gap-2 mb-1.5">
                         <span className={`text-xs font-bold px-2 py-0.5 rounded ${isRevisionRequested ? 'bg-red-100 text-red-600 animate-pulse' : 'bg-slate-200 text-slate-600'}`}>
                           {isRevisionRequested ? '수정 요청' : '피드백 / 제출 완료'}
                         </span>
                         <span className="text-sm font-bold text-slate-800">{figureName} 보고서 피드백</span>
                       </div>
-                      <p className="text-sm text-slate-600 line-clamp-1">{fb.feedback.text}</p>
+                      <p className="text-sm text-slate-600 line-clamp-2 sm:line-clamp-1">{fb.feedback.text}</p>
                     </div>
-                    <div>
+                    <div className="w-full sm:w-auto flex justify-end">
                       {isRevisionRequested ? (
                         <button
                           onClick={() => navigate(`/student/report?figureId=${fb.figureId}`)}
-                          className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm whitespace-nowrap transition-colors"
+                          className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm whitespace-nowrap transition-colors"
                         >
                           수정하러 가기 →
                         </button>
                       ) : (
                         <button
                           onClick={() => navigate(`/student/report?figureId=${fb.figureId}`)}
-                          className="bg-white border border-slate-300 text-slate-600 text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-slate-50 whitespace-nowrap transition-colors"
+                          className="w-full sm:w-auto bg-white border border-slate-300 text-slate-600 text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-slate-50 whitespace-nowrap transition-colors"
                         >
                           보고서 보기
                         </button>

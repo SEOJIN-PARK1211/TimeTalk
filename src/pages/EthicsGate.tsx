@@ -91,8 +91,8 @@ export default function EthicsGate() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-blue-50 py-8 px-4">
-      <div className="max-w-3xl mx-auto">
+    <div className="min-h-[100dvh] bg-gradient-to-b from-amber-50 via-white to-blue-50 py-6 sm:py-8 px-4">
+      <div className="max-w-3xl mx-auto pb-10">
         {/* 헤더 */}
         <div className="text-center mb-8">
           <h1 className="text-2xl font-extrabold text-slate-800 mb-2">
@@ -146,7 +146,7 @@ export default function EthicsGate() {
           <button
             onClick={handleAgree}
             disabled={agreed}
-            className={`px-8 py-4 rounded-2xl font-bold text-base transition-all duration-300 shadow-md ${
+            className={`w-full sm:w-auto px-4 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold text-sm sm:text-base transition-all duration-300 shadow-md ${
               agreed
                 ? 'bg-green-500 text-white scale-95'
                 : 'bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white hover:shadow-lg hover:scale-[1.02]'

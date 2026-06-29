@@ -369,8 +369,8 @@ export default function TeacherDashboard() {
 
             {/* 학생 테이블 */}
             {students.length > 0 ? (
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-                <table className="w-full text-left">
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-x-auto">
+                <table className="w-full text-left whitespace-nowrap">
                   <thead>
                     <tr className="bg-slate-50 border-b border-slate-200">
                       <th className="px-5 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider">학생 이름</th>

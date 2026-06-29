@@ -23,18 +23,18 @@ const GuideModal = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-      <div className="bg-[#121212] border border-white/10 rounded-2xl w-full max-w-2xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] animate-in fade-in zoom-in duration-300">
-        <div className="p-6 border-b border-white/10 flex justify-between items-center bg-white/5">
-          <h2 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+      <div className="bg-[#121212] border border-white/10 rounded-2xl w-full max-w-2xl overflow-hidden shadow-2xl flex flex-col max-h-[90dvh] animate-in fade-in zoom-in duration-300">
+        <div className="p-4 sm:p-6 border-b border-white/10 flex justify-between items-center bg-white/5">
+          <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
             🚀 TimeTalk 기능 및 이용 가이드
           </h2>
           <button onClick={handleClose} className="text-white/50 hover:text-white transition-colors rounded-full p-1 hover:bg-white/10">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>
         </div>
-        <div className="p-6 overflow-y-auto custom-scrollbar flex-1 text-white/80 space-y-8">
+        <div className="p-4 sm:p-6 overflow-y-auto custom-scrollbar flex-1 text-white/80 space-y-6 sm:space-y-8">
           <section>
-            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4 flex items-center gap-2">
               <span className="text-blue-400">🎓</span> 학생 기능 플로우
             </h3>
             <ul className="space-y-3 text-sm leading-relaxed text-white/70">
@@ -66,7 +66,7 @@ const GuideModal = () => {
           </section>
 
           <section>
-            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4 flex items-center gap-2">
               <span className="text-emerald-400">👨‍🏫</span> 교사 기능 및 대시보드
             </h3>
             <ul className="space-y-3 text-sm leading-relaxed text-white/70">
@@ -92,10 +92,10 @@ const GuideModal = () => {
           </section>
           
           <section>
-            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4 flex items-center gap-2">
               <span className="text-amber-400">🔑</span> 로그인 방법
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div className="bg-white/5 border border-white/10 rounded-xl p-4">
                 <h4 className="text-amber-400 font-medium mb-2">학생</h4>
                 <p className="text-sm text-white/70">선생님께 부여받은 <strong className="text-white">참여 코드(Room Code)</strong>를 입력하여 별도의 회원가입 없이 바로 접속할 수 있습니다.</p>
@@ -108,17 +108,17 @@ const GuideModal = () => {
           </section>
 
         </div>
-        <div className="p-6 border-t border-white/10 bg-black/20 flex gap-3 justify-end items-center">
+        <div className="p-4 sm:p-6 border-t border-white/10 bg-black/20 flex gap-3 justify-end items-center">
           <button 
             onClick={handleHideForever}
-            className="text-sm text-white/50 hover:text-white transition-colors mr-auto flex items-center gap-2"
+            className="text-xs sm:text-sm text-white/50 hover:text-white transition-colors mr-auto flex items-center gap-2"
           >
             <div className="w-4 h-4 border border-white/30 rounded flex items-center justify-center"></div>
             다시 보지 않기
           </button>
           <button 
             onClick={handleClose}
-            className="px-8 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl font-medium transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25"
+            className="px-6 py-2 sm:px-8 sm:py-2.5 text-sm sm:text-base bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl font-medium transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25"
           >
             확인 및 시작하기
           </button>

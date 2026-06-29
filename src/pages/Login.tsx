@@ -61,14 +61,14 @@ export default function Login() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-slate-50">
+      <div className="flex items-center justify-center min-h-[100dvh] bg-slate-50">
         <div className="text-slate-400 text-sm animate-pulse">로딩 중...</div>
       </div>
     )
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-4">
+    <div className="flex items-center justify-center min-h-[100dvh] bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-4">
       {/* 실명 입력 모달 */}
       {showNameModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
@@ -99,12 +99,12 @@ export default function Login() {
 
       <div className="bg-white rounded-2xl shadow-lg border border-slate-200 w-full max-w-md overflow-hidden">
         {/* 헤더 */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-10 text-center text-white">
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-8 sm:px-8 sm:py-10 text-center text-white">
           <h1 className="text-3xl font-extrabold tracking-tight mb-1">TimeTalk</h1>
           <p className="text-blue-100 text-sm">역사 인물과 대화하며 배우는 역사 탐구</p>
         </div>
 
-        <div className="p-8">
+        <div className="p-6 sm:p-8">
           {/* 역할 탭 */}
           <div className="flex bg-slate-100 rounded-xl p-1 mb-6">
             <button

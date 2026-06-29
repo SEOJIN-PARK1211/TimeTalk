@@ -449,8 +449,8 @@ export default function ReportDraft() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 py-8 px-4">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-[100dvh] bg-slate-50 py-6 sm:py-8 px-4">
+      <div className="max-w-5xl mx-auto pb-10">
         {/* 상단 헤더 */}
         <div className="flex items-center justify-between mb-6">
           <div>
@@ -479,7 +479,7 @@ export default function ReportDraft() {
             {/* 로그아웃 버튼 */}
             <button
               onClick={handleLogout}
-              className="text-xs bg-white border border-slate-200 text-slate-500 hover:bg-red-50 hover:text-red-600 hover:border-red-200 px-3 py-1.5 rounded-lg font-bold transition-all shadow-sm ml-4"
+              className="text-xs bg-white border border-slate-200 text-slate-500 hover:bg-red-50 hover:text-red-600 hover:border-red-200 px-3 py-1.5 rounded-lg font-bold transition-all shadow-sm shrink-0"
             >
               로그아웃
             </button>
@@ -516,7 +516,7 @@ export default function ReportDraft() {
               </div>
             )}
             <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-              <div className="bg-slate-50 px-5 py-3 border-b border-slate-200 flex justify-between items-center">
+              <div className="bg-slate-50 px-5 py-3 border-b border-slate-200 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-0">
                 <span className="font-bold text-slate-700 text-sm">🤖 AI 초안 (수정 가능)</span>
                 <div className="flex items-center gap-2">
                   {!hasRegenerated && status !== 'submitted' && (
